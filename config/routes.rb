@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
+  # Routes for the Product resource:
 
+  # CREATE
+  post("/insert_product", { :controller => "products", :action => "create" })
+          
+  # READ
+  get("/products", { :controller => "products", :action => "index" })
+  
+  get("/products/:path_id", { :controller => "products", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_product/:path_id", { :controller => "products", :action => "update" })
+  
+  # DELETE
+  get("/delete_product/:path_id", { :controller => "products", :action => "destroy" })
 
+  #------------------------------
 
   # Routes for the Employee account:
 
