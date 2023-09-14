@@ -1,0 +1,66 @@
+<div >
+  <h5>
+    Edit Employee Account
+  </h5>
+
+  <% if @employee.errors.any? %>
+  <% @employee.errors.full_messages.each do |message| %>
+    <div class="alert">
+      <%= message %>
+    </div>
+  <% end %>
+  <% end %>
+  <div>
+    <form action="/modify_employee" method="post">
+              
+      <div>
+        <label for="email_box">Email</label>
+          
+        <input id="email_box" name="query_email" value="<%= @current_employee.email %>">
+          
+      </div>
+                                    
+      <div>
+        <label for="sign_in_count_box">Sign in count</label>
+          
+        <input id="sign_in_count_box" name="query_sign_in_count" value="<%= @current_employee.sign_in_count %>">
+          
+      </div>
+                      
+      <div>
+        <label for="current_sign_in_at_box">Current sign in at</label>
+          
+        <input id="current_sign_in_at_box" name="query_current_sign_in_at" value="<%= @current_employee.current_sign_in_at %>">
+          
+      </div>
+                      
+      <div>
+        <label for="last_sign_in_at_box">Last sign in at</label>
+          
+        <input id="last_sign_in_at_box" name="query_last_sign_in_at" value="<%= @current_employee.last_sign_in_at %>">
+          
+      </div>
+                      
+      <div>
+        <label for="admin_box">Admin</label>
+          
+        <input id="admin_box" name="query_admin" type="checkbox" value="1" <%= "checked" if @current_employee.admin %>>
+          
+      </div>
+              
+      <div>
+        <label for="password_box">Password</label>
+        <input id="password_box" name="query_password" placeholder="Choose a new password..." type="password">
+      </div>
+    
+      <div>
+        <label for="password_confirmation_box">Password Confirmation</label>
+        <input id="password_confirmation_box" name="query_password_confirmation" placeholder="Confirm your new password..." type="password">
+      </div>
+
+      <button>
+        Update account
+      </button>
+    </form>
+  </div>
+</div>
