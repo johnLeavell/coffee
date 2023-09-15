@@ -1,0 +1,21 @@
+<nav class="navbar bg-primary" mb-4>
+  <div class="container">
+    <a class="navbar-brand link-light text-white" href="/"> Coffee Shop
+    </a>
+
+     <% if @current_user == nil %>
+  <div class="navigation">
+      <nav>
+        <a class="link-light text-white" href="employee_sign_in">Sign in</a> | <a class="link-light text-white" href="/employee_sign_up">Sign up</a>
+      </nav>
+    <% end %>
+
+    <% if @current_user != nil %>
+      <nav>
+        <a class="link-light text-white" href="/edit_employee_profile">Edit profile</a> | 
+        <a class="link-light text-white" href="/employee_sign_out">Sign out</a>
+      </nav>
+    <% end %>
+  </div> <!-- .container -->  
+    </nav>
+</div>

@@ -12,10 +12,17 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
-
+    
+    <%= render "shared/cdn_assets" %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "shared/navbar" %>
+
+    <div class="container">
+      <%= render "shared/flashes" %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>
