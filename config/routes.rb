@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   # SIGN OUT        
   get("/employee_sign_out", { :controller => "employee_authentication", :action => "destroy_cookies" })
              
+  get("/employee/:path_id", { :controller => "employee", :action => "index"})
   #------------------------------
 
 end

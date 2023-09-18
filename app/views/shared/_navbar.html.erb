@@ -3,17 +3,18 @@
     <a class="navbar-brand link-light text-white" href="/"> Coffee Shop
     </a>
 
-     <% if @current_user == nil %>
+     <% if @current_employee == nil %>
   <div class="navigation">
       <nav>
         <a class="link-light text-white" href="employee_sign_in">Sign in</a> | <a class="link-light text-white" href="/employee_sign_up">Sign up</a>
       </nav>
     <% end %>
 
-    <% if @current_user != nil %>
+    <% if @current_employee != nil %>
       <nav>
         <a class="link-light text-white" href="/edit_employee_profile">Edit profile</a> | 
         <a class="link-light text-white" href="/employee_sign_out">Sign out</a>
+        <h3> <%= @current_employee.email %></h3>
       </nav>
     <% end %>
   </div> <!-- .container -->  
