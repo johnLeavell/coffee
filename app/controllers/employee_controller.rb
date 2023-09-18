@@ -6,6 +6,9 @@ class EmployeeController < ApplicationController
     matching_employee = Employee.where({ id: path_user })
     @employee = matching_employee.first
 
-    render template: 'users/index.html.erb'
+    render template: 'employees/index'
   end
+
+
+
 end
