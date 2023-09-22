@@ -1,52 +1,44 @@
 <div class="container">
-<div>
-  <h1>
-    List of all products
-  </h1>
-</div>
+  <div>
+    <h2>
+      Add a new product
+    </h2>
+  </div>
 
 <hr>
 
 <div>
   <div>
-    <h2>
-      Add a new product
-    </h2>
-
     <form action="/insert_product" method="post">
-      <div>
-        <label for="name_box">
+      <div class="mb-3">
+        <label for="name_box" class="form-label">
           Name
         </label>
-
-        <input type="text" id="name_box" name="query_name">
+        <input type="text" id="name_box" name="query_name" class="form-control">
       </div>
 
-      <div>
-        <label for="description_box">
+      <div class="mb-3">
+        <label for="description_box" class="form-label">
           Description
         </label>
-
-        <input type="text" id="description_box" name="query_description">
+        <input type="text" id="description_box" name="query_description" class="form-control">
       </div>
 
-      <div>
-        <label for="price_box">
+      <div class="mb-3">
+        <label for="price_box" class="form-label">
           Price
         </label>
-
-        <input type="text" id="price_box" name="query_price">
+        <input type="text" id="price_box" name="query_price" class="form-control">
       </div>
 
-      <div>
-        <label for="category_id_box">
+      <div class="mb-3">
+        <label for="category_id_box" class="form-label">
           Category
         </label>
-
-        <input type="text" id="category_id_box" name="query_category_id">
+        <input type="text" id="category_id_box" name="query_category_id" class="form-control" >
       </div>
 
-      <button>
+      <button class="btn btn-primary mb-3">
         Create product
       </button>
     </form>

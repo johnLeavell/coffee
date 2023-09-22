@@ -19,7 +19,7 @@ class EmployeeAuthenticationController < ApplicationController
       else
         session[:employee_id] = employee.id
       
-        redirect_to("/employee/#{session[:employee_id]}", { :notice => "Signed in successfully." })
+        redirect_to("/dashboard/#{session[:employee_id]}", { :notice => "Signed in successfully." })
       end
     else
       redirect_to("/employee_sign_in", { :alert => "No employee with that email address." })

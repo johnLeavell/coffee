@@ -53,9 +53,9 @@ Rails.application.routes.draw do
   get("/cancel_employee_account", { :controller => "employee_authentication", :action => "destroy" })
 
   # ------------------------------
-
+  get('/dashboard/:path_id', { :controller => "home", :action => "index" })
   # SIGN IN FORM
-  get("/employee_sign_in", { :controller => "employee_authentication", :action => "sign_in_form" })
+  get("/sign_up_form", { :controller => "employee_authentication", :action => "sign_in_form" })
   # AUTHENTICATE AND STORE COOKIE
   post("/employee_verify_credentials", { :controller => "employee_authentication", :action => "create_cookie" })
   
