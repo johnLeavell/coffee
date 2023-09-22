@@ -41,10 +41,9 @@ class EmployeeAuthenticationController < ApplicationController
     @employee.email = params.fetch("query_email")
     @employee.password = params.fetch("query_password")
     @employee.password_confirmation = params.fetch("query_password_confirmation")
-    @employee.sign_in_count = params.fetch("query_sign_in_count")
-    @employee.current_sign_in_at = params.fetch("query_current_sign_in_at")
-    @employee.last_sign_in_at = params.fetch("query_last_sign_in_at")
-    @employee.admin = params.fetch("query_admin", false)
+    @employee.first_name = params.fetch("query_first_name")
+    @employee.last_name = params.fetch("query_last_name")
+    @employee.avatar = params.fetch("query_avatar")
 
     save_status = @employee.save
 
